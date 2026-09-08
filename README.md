@@ -265,18 +265,6 @@ Every contributor gets it automatically. **Use:** `CIA it: <paste your idea>` in
 
 ---
 
-## Using it through OpenRouter (or any API gateway)
-
-[OpenRouter](https://openrouter.ai) is an API **router**, not an agent runtime — it has no skills directory of its own. To use CIA with OpenRouter you install the skill into any agent above and point that agent at OpenRouter:
-
-- **OpenCode** — add a custom provider in `opencode.json` with `baseURL: https://openrouter.ai/api/v1` and an OpenRouter API key.
-- **Claude Code** — set `ANTHROPIC_BASE_URL=https://openrouter.ai/api` and `ANTHROPIC_AUTH_TOKEN` (OpenRouter key).
-- **Codex** — configure a custom `model_providers` entry (or `OPENAI_BASE_URL`) pointing at `https://openrouter.ai/api/v1`.
-
-OpenRouter exposes OpenAI- and Anthropic-compatible endpoints, so server-side nothing changes — the skill stays client-side. Claim the same trick works for Gemini and Kimi via their OpenAI-compatible endpoints, and double-check the current base URL in your agent's provider docs.
-
----
-
 ## Usage
 
 Nothing to remember — every agent already knows the trigger phrases:
