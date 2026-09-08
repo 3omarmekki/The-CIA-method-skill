@@ -55,6 +55,6 @@
     <rect x="24" y="272" width="1152" height="92" rx="12" fill="#191D2F" stroke="#F7A901" stroke-opacity="0.45"/>
     <text x="48" y="296" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#F7A901" letter-spacing="3">DELIVERABLE</text>
     <text x="48" y="322" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#EAD9BC">The highest-risk failure · the one assumption that would break the idea · the next concrete test to run</text>
-    <text x="48" y="346" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#F7A901">VERDICT  —  GO&nbsp;&nbsp;·&nbsp;&nbsp;GO WITH CONDITIONS&nbsp;&nbsp;·&nbsp;&nbsp;DON'T</text>
+    <text x="48" y="346" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#F7A901">VERDICT  —  GO   ·   GO WITH CONDITIONS   ·   DON'T</text>
   </g>
 </svg>
