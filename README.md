@@ -52,22 +52,22 @@ Two ways. Both are copy-paste on any OS.
 
 ### Option A — universal copy (works everywhere)
 
-The skill lives in a self-contained `cia/` folder, so installing it is just copying that folder into any agent's skills directory (see the table below for the exact path).
+The skill lives in a self-contained `skill/` folder, so installing it is just copying that folder into any agent's skills directory (see the table below for the exact path).
 
 **macOS / Linux**
 
 ```bash
 git clone --depth 1 https://github.com/3omarmekki/The-CIA-method-skill.git /tmp/cia-skill
-mkdir -p ~/.agents/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.agents/skills/cia/SKILL.md
+mkdir -p ~/.agents/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.agents/skills/skill/SKILL.md
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
 git clone --depth 1 https://github.com/3omarmekki/The-CIA-method-skill.git $env:TEMP\cia-skill
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.agents\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.agents\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.agents\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.agents\skills\skill\SKILL.md"
 ```
 
 The `~/.agents/skills/` (and `~/.config/agents/skills/`) locations are the open interoperable home — they are read by Gemini CLI, Kimi Code CLI, Cursor, Codex, and several others.
@@ -88,16 +88,16 @@ The CLI detects which agent is installed and drops the skill into the right dire
 
 | Agent | Global (all projects) | Project (this repo only) | Invoke |
 |---|---|---|---|
-| **OpenCode** | `~/.config/opencode/skills/cia/` | `.opencode/skills/cia/` | "CIA it: …" |
-| **Codex (OpenAI)** | `~/.codex/skills/cia/` | `.codex/skills/cia/` | "CIA it: …" |
-| **Claude Code** | `~/.claude/skills/cia/` | `.claude/skills/cia/` | `/` menu or "CIA it: …" |
-| **Gemini CLI** | `~/.gemini/skills/cia/` | `.gemini/skills/cia/` | auto ("CIA it: …") |
-| **Kimi Code CLI** | `~/.kimi/skills/cia/` | `.kimi-code/skills/cia/` | `/skill:cia` |
-| **Cursor** | `~/.cursor/skills/cia/` | `.cursor/skills/cia/` | `/` → `cia`, or `@cia` |
-| **GitHub Copilot** | — | `.github/copilot/skills/cia/` | auto / `/cia` |
-| **Any SKILL.md agent** | `~/.agents/skills/cia/` | `.agents/skills/cia/` | auto |
+| **OpenCode** | `~/.config/opencode/skills/skill/` | `.opencode/skills/skill/` | "CIA it: …" |
+| **Codex (OpenAI)** | `~/.codex/skills/skill/` | `.codex/skills/skill/` | "CIA it: …" |
+| **Claude Code** | `~/.claude/skills/skill/` | `.claude/skills/skill/` | `/` menu or "CIA it: …" |
+| **Gemini CLI** | `~/.gemini/skills/skill/` | `.gemini/skills/skill/` | auto ("CIA it: …") |
+| **Kimi Code CLI** | `~/.kimi/skills/skill/` | `.kimi-code/skills/skill/` | `/skill:skill` |
+| **Cursor** | `~/.cursor/skills/skill/` | `.cursor/skills/skill/` | `/` → `skill`, or `@skill` |
+| **GitHub Copilot** | — | `.github/copilot/skills/skill/` | auto / `/skill` |
+| **Any SKILL.md agent** | `~/.agents/skills/skill/` | `.agents/skills/skill/` | auto |
 
-> Only `SKILL.md` is required. Supporting `scripts/`, `references/`, `assets/` may live beside it — place the whole `cia` folder when copying.
+> Only `SKILL.md` is required. Supporting `scripts/`, `references/`, `assets/` may live beside it — place the whole `skill` folder when copying.
 
 <details>
   <summary><strong>Detailed setup — OpenCode</strong></summary>
@@ -105,21 +105,21 @@ The CLI detects which agent is installed and drops the skill into the right dire
 **macOS / Linux**
 
 ```bash
-mkdir -p ~/.config/opencode/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.config/opencode/skills/cia/SKILL.md
+mkdir -p ~/.config/opencode/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.config/opencode/skills/skill/SKILL.md
 # or project-scoped:
-mkdir -p .opencode/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md .opencode/skills/cia/SKILL.md
+mkdir -p .opencode/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md .opencode/skills/skill/SKILL.md
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.config\opencode\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.config\opencode\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.config\opencode\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.config\opencode\skills\skill\SKILL.md"
 ```
 
-**Verify:** start `opencode` and ask *"list your available skills"* — `cia` should appear. **Use:** `CIA it: <paste your idea>`.
+**Verify:** start `opencode` and ask *"list your available skills"* — `skill` should appear. **Use:** `CIA it: <paste your idea>`.
 </details>
 
 <details>
@@ -128,18 +128,18 @@ Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.config\opencode\
 **macOS / Linux**
 
 ```bash
-mkdir -p ~/.codex/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.codex/skills/cia/SKILL.md
+mkdir -p ~/.codex/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.codex/skills/skill/SKILL.md
 # or project-scoped:
-mkdir -p .codex/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md .codex/skills/cia/SKILL.md
+mkdir -p .codex/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md .codex/skills/skill/SKILL.md
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.codex\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.codex\skills\skill\SKILL.md"
 ```
 
 **Verify:** start `codex`, type `$skill-installer list`. **Use:** `CIA it: <paste your idea>`.
@@ -151,21 +151,21 @@ Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.codex\skills\cia
 **macOS / Linux**
 
 ```bash
-mkdir -p ~/.claude/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.claude/skills/cia/SKILL.md
+mkdir -p ~/.claude/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.claude/skills/skill/SKILL.md
 # or project-scoped:
-mkdir -p .claude/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md .claude/skills/cia/SKILL.md
+mkdir -p .claude/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md .claude/skills/skill/SKILL.md
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.claude\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.claude\skills\skill\SKILL.md"
 ```
 
-**Verify:** type `/` in the Claude Code prompt — `cia` shows in the skills menu. **Use:** `CIA it: <paste your idea>`.
+**Verify:** type `/` in the Claude Code prompt — `skill` shows in the skills menu. **Use:** `CIA it: <paste your idea>`.
 </details>
 
 <details>
@@ -183,15 +183,15 @@ gemini skills install https://github.com/3omarmekki/The-CIA-method-skill.git
 **Or manually — macOS / Linux**
 
 ```bash
-mkdir -p ~/.gemini/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.gemini/skills/cia/SKILL.md
+mkdir -p ~/.gemini/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.gemini/skills/skill/SKILL.md
 ```
 
 **Or manually — Windows (PowerShell)**
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.gemini\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.gemini\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.gemini\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.gemini\skills\skill\SKILL.md"
 ```
 
 **Verify:** inside `gemini`, run `/skills list` (or `/skills reload` after installing). **Use:** it auto-triggers on *"CIA it: …"*.
@@ -203,23 +203,23 @@ Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.gemini\skills\ci
 **macOS / Linux**
 
 ```bash
-mkdir -p ~/.kimi/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.kimi/skills/cia/SKILL.md
+mkdir -p ~/.kimi/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.kimi/skills/skill/SKILL.md
 # or project-scoped:
-mkdir -p .kimi-code/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md .kimi-code/skills/cia/SKILL.md
+mkdir -p .kimi-code/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md .kimi-code/skills/skill/SKILL.md
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.kimi\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.kimi\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.kimi\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.kimi\skills\skill\SKILL.md"
 ```
 
 Kimi also reads `~/.agents/skills/`, `~/.claude/skills/` and `~/.codex/skills/`, so an install there works too.
 
-**Verify / use:** type `/skills` to list, or load it explicitly with `/skill:cia <paste your idea>`.
+**Verify / use:** type `/skills` to list, or load it explicitly with `/skill:skill <paste your idea>`.
 </details>
 
 <details>
@@ -228,21 +228,21 @@ Kimi also reads `~/.agents/skills/`, `~/.claude/skills/` and `~/.codex/skills/`,
 **macOS / Linux**
 
 ```bash
-mkdir -p ~/.cursor/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md ~/.cursor/skills/cia/SKILL.md
+mkdir -p ~/.cursor/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md ~/.cursor/skills/skill/SKILL.md
 # or project-scoped:
-mkdir -p .cursor/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md .cursor/skills/cia/SKILL.md
+mkdir -p .cursor/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md .cursor/skills/skill/SKILL.md
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.cursor\skills\cia"
-Copy-Item "$env:TEMP\cia-skill\cia\SKILL.md" "$env:USERPROFILE\.cursor\skills\cia\SKILL.md"
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.cursor\skills\skill"
+Copy-Item "$env:TEMP\cia-skill\skill\SKILL.md" "$env:USERPROFILE\.cursor\skills\skill\SKILL.md"
 ```
 
-Cursor also auto-loads from `.claude/skills/` and `.codex/skills/` for compatibility. **Use:** type `/` in agent chat and pick `cia`, or attach once with `@cia`.
+Cursor also auto-loads from `.claude/skills/` and `.codex/skills/` for compatibility. **Use:** type `/` in agent chat and pick `skill`, or attach once with `@skill`.
 </details>
 
 <details>
@@ -253,9 +253,9 @@ Project-scoped only:
 **Command line (any OS)** — commit the skill into the repo:
 
 ```bash
-mkdir -p .github/copilot/skills/cia
-cp /tmp/cia-skill/cia/SKILL.md .github/copilot/skills/cia/SKILL.md
-git add .github/copilot/skills/cia
+mkdir -p .github/copilot/skills/skill
+cp /tmp/cia-skill/skill/SKILL.md .github/copilot/skills/skill/SKILL.md
+git add .github/copilot/skills/skill
 git commit -m "Add CIA skill for Copilot"
 git push
 ```

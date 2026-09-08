@@ -1,6 +1,6 @@
 ---
-name: cia
-description: Stress-test any idea using the CIA challenge framework — check key assumptions, generate alternatives, compare competing hypotheses, run a what-if test, then red-team it. Use when someone has an idea, plan, technical approach, or decision and wants to reduce bias and avoid locking onto the first plausible story before spending time, code, or budget. Run as the default critique whenever the user invokes /cia or asks to "CIA it".
+name: skill
+description: Stress-test any idea using the CIA challenge framework — check key assumptions, generate alternatives, compare competing hypotheses, run a what-if test, then red-team it. Use when someone has an idea, plan, technical approach, or decision and wants to reduce bias and avoid locking onto the first plausible story before spending time, code, or budget. Run as the default critique whenever the user invokes /skill or asks to "CIA it".
 license: MIT
 ---
 
